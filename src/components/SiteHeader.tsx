@@ -1,0 +1,51 @@
+import { Link, NavLink } from "react-router-dom";
+import { Search, User, ShoppingBag } from "lucide-react";
+import { CATEGORIES } from "@/data/products";
+
+const SiteHeader = () => {
+  return (
+    <header className="sticky top-0 z-40 bg-background/90 backdrop-blur border-b border-border/60">
+      {/* Top bar */}
+      <div className="container">
+        <div className="grid grid-cols-3 items-center h-16 md:h-20">
+          <div className="flex items-center">
+            <button aria-label="Search" className="p-2 -ml-2 text-foreground/80 hover:text-foreground transition-colors">
+              <Search className="h-[18px] w-[18px]" strokeWidth={1.5} />
+            </button>
+          </div>
+
+          <Link to="/" className="text-center">
+            <h1 className="font-serif text-xl md:text-2xl tracking-wide">
+              Apple Bee Boutique
+            </h1>
+          </Link>
+
+          <div className="flex items-center justify-end gap-1 md:gap-3">
+            <button className="hidden md:inline-block nav-link px-2">Account</button>
+            <Link to="/cart" aria-label="Cart" className="p-2 -mr-2 text-foreground/80 hover:text-foreground transition-colors">
+              <ShoppingBag className="h-[18px] w-[18px]" strokeWidth={1.5} />
+            </Link>
+          </div>
+        </div>
+
+        {/* Secondary nav */}
+        <nav className="border-t border-border/50">
+          <ul className="flex items-center justify-center gap-5 md:gap-8 overflow-x-auto py-3 no-scrollbar">
+            {CATEGORIES.map((c) => (
+              <li key={c} className="shrink-0">
+                <NavLink
+                  to={`/?category=${encodeURIComponent(c)}`}
+                  className="nav-link"
+                >
+                  {c}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default SiteHeader;
