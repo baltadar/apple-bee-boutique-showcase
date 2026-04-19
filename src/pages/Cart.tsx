@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 
 // WhatsApp number — international format, no +
@@ -19,6 +20,12 @@ const Cart = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Shopping Cart — Apple Bee Boutique"
+        description="Review your selections and checkout with Apple Bee Boutique. Order online or via WhatsApp for personal service."
+        path="/cart"
+        noindex
+      />
       <SiteHeader />
 
       <main className="flex-1 container py-20 md:py-28">
