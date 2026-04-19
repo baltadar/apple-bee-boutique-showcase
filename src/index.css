@@ -101,7 +101,8 @@
     aspect-ratio: 3 / 4;
   }
   .product-image {
-    @apply absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out;
+    @apply absolute inset-0 h-full w-full object-cover transition-transform ease-out;
+    transition-duration: 1200ms;
   }
   .group:hover .product-image {
     transform: scale(1.04);
