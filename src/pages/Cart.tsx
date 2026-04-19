@@ -2,8 +2,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { Link } from "react-router-dom";
 
-// WhatsApp number — replace with your boutique's number (international format, no +)
-const WHATSAPP_NUMBER = "1234567890";
+// WhatsApp number — international format, no +
+const WHATSAPP_NUMBER = "254113822980";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi Apple Bee Boutique, I'd like to place an order."
 );
