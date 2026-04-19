@@ -25,7 +25,7 @@ const Index = () => {
         {/* Hero strip */}
         <section className="bg-beige/40">
           <div className="container py-16 md:py-24 text-center">
-            <p className="nav-link mb-4">Spring / Summer 2026</p>
+            <p className="nav-link mb-4">The April Edit</p>
             <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto">
               Quiet wardrobe essentials, crafted to be lived in.
             </h2>
