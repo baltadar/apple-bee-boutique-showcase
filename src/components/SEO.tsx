@@ -10,7 +10,7 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const SITE_URL = "https://applebeeboutique.co.ke";
+const SITE_URL = "https://applebeeboutique.com";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const SEO = ({
