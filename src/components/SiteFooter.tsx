@@ -1,9 +1,11 @@
+import logo from "@/assets/logo.svg";
+
 const SiteFooter = () => {
   return (
     <footer className="border-t border-border/60 mt-24">
       <div className="container py-12 grid gap-10 md:grid-cols-3 text-sm">
         <div>
-          <h4 className="font-serif text-lg mb-3">Apple Bee Boutique</h4>
+          <img src={logo} alt="Apple Bee Boutique" className="h-14 w-auto mb-3" />
           <p className="text-muted-foreground leading-relaxed">
             Considered pieces for the modern wardrobe. Designed with care, made to last.
           </p>

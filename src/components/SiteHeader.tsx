@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import { Search, User, ShoppingBag } from "lucide-react";
+import { Search, ShoppingBag } from "lucide-react";
 import { CATEGORIES } from "@/data/products";
+import logo from "@/assets/logo.svg";
 
 const SiteHeader = () => {
   return (
@@ -14,10 +15,12 @@ const SiteHeader = () => {
             </button>
           </div>
 
-          <Link to="/" className="text-center">
-            <h1 className="font-serif text-xl md:text-2xl tracking-wide">
-              Apple Bee Boutique
-            </h1>
+          <Link to="/" className="flex justify-center" aria-label="Apple Bee Boutique">
+            <img
+              src={logo}
+              alt="Apple Bee Boutique"
+              className="h-12 md:h-16 w-auto"
+            />
           </Link>
 
           <div className="flex items-center justify-end gap-1 md:gap-3">
