@@ -6,7 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import SEO from "@/components/SEO";
 import { products, Category } from "@/data/products";
 
-const SITE_URL = "https://applebeeboutique.co.ke";
+const SITE_URL = "https://applebeeboutique.com";
 
 const Index = () => {
   const [params] = useSearchParams();

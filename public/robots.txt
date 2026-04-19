@@ -70,4 +70,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://applebeeboutique.co.ke/sitemap.xml
+Sitemap: https://applebeeboutique.com/sitemap.xml
