@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import ProductCard from "@/components/ProductCard";
 import SEO from "@/components/SEO";
 import { products, Category } from "@/data/products";
+import heroImage from "@/assets/hero-shoes-accessories.jpg";
 
 const SITE_URL = "https://applebeeboutique.com";
 
@@ -70,14 +71,23 @@ const Index = () => {
 
       <main className="flex-1">
         {/* Hero strip */}
-        <section className="bg-beige/40" aria-labelledby="hero-heading">
-          <div className="container py-16 md:py-24 text-center">
+        <section className="relative overflow-hidden" aria-labelledby="hero-heading">
+          <img
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
+          <div className="relative container py-20 md:py-32 text-center">
             <p className="nav-link mb-4">Apple Bee Boutique</p>
             <h1
               id="hero-heading"
               className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto"
             >
-              Shoes & womenswear, made for Nairobi living.
+              Shoes & Ladies Accessories
             </h1>
             <p className="sr-only">
               Apple Bee Boutique is a Nairobi-based boutique offering shoes, dresses, tops,
