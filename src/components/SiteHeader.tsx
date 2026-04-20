@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Search, ShoppingBag } from "lucide-react";
+import { Search } from "lucide-react";
 import { CATEGORIES } from "@/data/products";
 import logo from "@/assets/logo.svg";
 
@@ -23,12 +23,7 @@ const SiteHeader = () => {
             />
           </Link>
 
-          <div className="flex items-center justify-end gap-1 md:gap-3">
-            <button className="hidden md:inline-block nav-link px-2">Account</button>
-            <Link to="/cart" aria-label="Cart" className="p-2 -mr-2 text-foreground/80 hover:text-foreground transition-colors">
-              <ShoppingBag className="h-[18px] w-[18px]" strokeWidth={1.5} />
-            </Link>
-          </div>
+          <div className="flex items-center justify-end gap-1 md:gap-3" />
         </div>
 
         {/* Secondary nav */}
