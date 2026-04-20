@@ -3,7 +3,7 @@
 // (Cloudinary, Shopify CDN, S3, Unsplash, etc.). Aspect ratio is enforced by the layout.
 
 export type Category =
-  | "New Collection"
+  | "Shoes"
   | "Dresses"
   | "Tops"
   | "Bottoms"
@@ -23,7 +23,7 @@ export interface Product {
 }
 
 export const CATEGORIES: Category[] = [
-  "New Collection",
+  "Shoes",
   "Dresses",
   "Tops",
   "Bottoms",
