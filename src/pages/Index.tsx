@@ -10,23 +10,20 @@ const SITE_URL = "https://applebeeboutique.com";
 
 const Index = () => {
   const [params] = useSearchParams();
-  const category = params.get("category") as Category | null;
+  const category = (params.get("category") as Category | null) ?? "Shoes";
 
   const filtered = useMemo(() => {
-    if (!category) return products;
-    if (category === "New Collection") return products.filter((p) => p.isNew);
     return products.filter((p) => p.category === category);
   }, [category]);
 
-  const title = category ?? "April Collection";
-  const path = category ? `/?category=${encodeURIComponent(category)}` : "/";
+  const title = category;
+  const path = `/?category=${encodeURIComponent(category)}`;
 
-  const seoTitle = category
-    ? `${category} — Apple Bee Boutique Kenya`
-    : "Apple Bee Boutique — Considered Womenswear in Kenya";
-  const seoDescription = category
-    ? `Shop ${category.toLowerCase()} from Apple Bee Boutique, a Nairobi-based womenswear label. Order online or via WhatsApp.`
-    : "Quiet, considered womenswear in Nairobi. Shop dresses, tops, sets and outerwear designed to be lived in. Order online or via WhatsApp.";
+  const seoTitle = `${category} — Apple Bee Boutique Kenya`;
+  const seoDescription =
+    category === "Shoes"
+      ? "Shop curated women's shoes at Apple Bee Boutique, a Nairobi-based boutique. Heels, flats, mules and sandals. Order online or via WhatsApp."
+      : `Shop ${category.toLowerCase()} from Apple Bee Boutique, a Nairobi-based womenswear boutique. Order online or via WhatsApp.`;
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -57,9 +54,7 @@ const Index = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-      ...(category
-        ? [{ "@type": "ListItem", position: 2, name: category, item: `${SITE_URL}${path}` }]
-        : []),
+      { "@type": "ListItem", position: 2, name: category, item: `${SITE_URL}${path}` },
     ],
   };
 
@@ -77,15 +72,15 @@ const Index = () => {
         {/* Hero strip */}
         <section className="bg-beige/40" aria-labelledby="hero-heading">
           <div className="container py-16 md:py-24 text-center">
-            <p className="nav-link mb-4">The April Edit</p>
+            <p className="nav-link mb-4">Apple Bee Boutique</p>
             <h1
               id="hero-heading"
               className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto"
             >
-              Quiet wardrobe essentials, crafted to be lived in.
+              Shoes & womenswear, made for Nairobi living.
             </h1>
             <p className="sr-only">
-              Apple Bee Boutique is a Nairobi-based womenswear boutique offering dresses, tops,
+              Apple Bee Boutique is a Nairobi-based boutique offering shoes, dresses, tops,
               sets, outerwear and accessories. Shop online or order via WhatsApp.
             </p>
           </div>
