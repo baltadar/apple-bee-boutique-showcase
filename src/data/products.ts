@@ -34,6 +34,36 @@ export const CATEGORIES: Category[] = [
 
 export const products: Product[] = [
   {
+    id: "ab-sh-001",
+    name: "Leather Slingback Flat",
+    price: 6800,
+    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&q=80&auto=format&fit=crop",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-002",
+    name: "Suede Block Heel",
+    price: 8900,
+    image: "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=1200&q=80&auto=format&fit=crop",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-003",
+    name: "Woven Mule",
+    price: 5900,
+    image: "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?w=1200&q=80&auto=format&fit=crop",
+    category: "Shoes",
+  },
+  {
+    id: "ab-sh-004",
+    name: "Strappy Leather Sandal",
+    price: 7200,
+    image: "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?w=1200&q=80&auto=format&fit=crop",
+    category: "Shoes",
+  },
+  {
     id: "ab-001",
     name: "Linen Wrap Dress",
     price: 8500,
