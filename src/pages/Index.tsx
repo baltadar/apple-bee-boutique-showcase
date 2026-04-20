@@ -80,12 +80,14 @@ const Index = () => {
             height={1080}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
-          <div className="relative container py-20 md:py-32 text-center">
-            <p className="nav-link mb-4">Apple Bee Boutique</p>
+          <div className="absolute inset-0 bg-foreground/55" />
+          <div className="relative container py-20 md:py-32 text-center text-background">
+            <p className="text-xs uppercase tracking-[0.3em] mb-4 text-background/90">
+              Apple Bee Boutique
+            </p>
             <h1
               id="hero-heading"
-              className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto"
+              className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto text-background drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
               Shoes & Ladies Accessories
             </h1>
