@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
 const WHATSAPP_URL = "https://wa.me/254113822980";
@@ -21,22 +21,22 @@ const SiteFooter = () => {
           </p>
         </div>
         <div>
-          <h5 className="nav-link mb-3 block">Visit Us</h5>
+          <h5 className="nav-link mb-3 block">Call Us</h5>
           <ul className="space-y-2 text-muted-foreground">
-            <li>Nairobi, Kenya</li>
-            <li>Mon – Sat · 9:00 – 18:00</li>
             <li>
               <a
-                href={`mailto:${EMAIL}`}
-                className="hover:text-foreground transition-colors"
+                href="tel:+254113822980"
+                className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
               >
-                Get in touch →
+                <Phone className="h-4 w-4" strokeWidth={1.5} />
+                +254 113 822 980
               </a>
             </li>
+            <li className="text-xs">Mon – Sat · 9:00 – 18:00</li>
           </ul>
         </div>
         <div>
-          <h5 className="nav-link mb-3 block">Contact</h5>
+          <h5 className="nav-link mb-3 block">Contact Us</h5>
           <ul className="space-y-3 text-muted-foreground">
             <li>
               <a
@@ -58,7 +58,6 @@ const SiteFooter = () => {
                 {EMAIL}
               </a>
             </li>
-            <li className="text-xs">Nairobi, Kenya</li>
           </ul>
         </div>
       </div>
