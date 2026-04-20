@@ -13,12 +13,27 @@ const WhatsAppIcon = ({ className = "" }: { className?: string }) => (
 const SiteFooter = () => {
   return (
     <footer className="border-t border-border/60 mt-24">
-      <div className="container py-12 grid gap-10 md:grid-cols-2 text-sm">
+      <div className="container py-12 grid gap-10 md:grid-cols-3 text-sm">
         <div>
           <img src={logo} alt="Apple Bee Boutique" className="h-14 w-auto mb-3" />
           <p className="text-muted-foreground leading-relaxed">
             Considered pieces for the modern wardrobe. Designed with care, made to last.
           </p>
+        </div>
+        <div>
+          <h5 className="nav-link mb-3 block">Visit Us</h5>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>Nairobi, Kenya</li>
+            <li>Mon – Sat · 9:00 – 18:00</li>
+            <li>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="hover:text-foreground transition-colors"
+              >
+                Get in touch →
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
           <h5 className="nav-link mb-3 block">Contact</h5>
