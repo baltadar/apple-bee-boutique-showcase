@@ -52,7 +52,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900736_zrbsfl.jpg",
     category: "Shoes",
     isNew: true,
-    size: 41,
+    size: 39,
   },
   {
     id: "ab-sh-103",
