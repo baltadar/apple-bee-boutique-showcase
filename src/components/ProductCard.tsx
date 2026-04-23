@@ -66,6 +66,11 @@ const ProductCard = ({ product, priority = false }: Props) => {
       </div>
       <div className="pt-4 pb-2 text-center">
         <h3 className="font-sans text-[13px] tracking-wide text-foreground">{product.name}</h3>
+        {product.size !== undefined && (
+          <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            Size {product.size}
+          </p>
+        )}
         <p className="mt-1 text-[13px] text-muted-foreground">
           {formatPrice(product.price, product.currency)}
         </p>
