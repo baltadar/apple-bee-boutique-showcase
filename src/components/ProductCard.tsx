@@ -41,7 +41,7 @@ const ProductCard = ({ product }: Props) => {
           alt={product.name}
           loading="lazy"
           decoding="async"
-          className={`product-image ${isOut ? "grayscale opacity-60" : ""}`}
+          className="product-image"
         />
         {product.hoverImage && !isOut && (
           <img
