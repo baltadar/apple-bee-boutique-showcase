@@ -21,12 +21,19 @@ const ProductCard = ({ product }: Props) => {
   );
   const orderUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
+  const isOut = product.outOfStock;
+
   return (
     <article className="group animate-fade-in">
-      <div className="product-image-wrap">
-        {product.isNew && (
+      <div className="product-image-wrap relative">
+        {product.isNew && !isOut && (
           <span className="absolute top-3 left-3 z-10 bg-background/90 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-[0.2em]">
             New in
+          </span>
+        )}
+        {isOut && (
+          <span className="absolute top-3 left-3 z-10 bg-foreground text-background px-2.5 py-1 text-[10px] uppercase tracking-[0.2em]">
+            Out of stock
           </span>
         )}
         <img
@@ -34,9 +41,9 @@ const ProductCard = ({ product }: Props) => {
           alt={product.name}
           loading="lazy"
           decoding="async"
-          className="product-image"
+          className={`product-image ${isOut ? "grayscale opacity-60" : ""}`}
         />
-        {product.hoverImage && (
+        {product.hoverImage && !isOut && (
           <img
             src={product.hoverImage}
             alt=""
@@ -51,16 +58,22 @@ const ProductCard = ({ product }: Props) => {
         <p className="mt-1 text-[13px] text-muted-foreground">
           {formatPrice(product.price, product.currency)}
         </p>
-        <a
-          href={orderUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Order ${product.name} on WhatsApp`}
-          className="mt-3 inline-flex items-center justify-center gap-2 w-full bg-foreground text-background text-[11px] uppercase tracking-[0.2em] py-2.5 hover:bg-foreground/90 transition-colors"
-        >
-          <WhatsAppIcon className="h-3.5 w-3.5" />
-          Order
-        </a>
+        {isOut ? (
+          <span className="mt-3 inline-flex items-center justify-center gap-2 w-full bg-muted text-muted-foreground text-[11px] uppercase tracking-[0.2em] py-2.5 cursor-not-allowed">
+            Sold out
+          </span>
+        ) : (
+          <a
+            href={orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Order ${product.name} on WhatsApp`}
+            className="mt-3 inline-flex items-center justify-center gap-2 w-full bg-foreground text-background text-[11px] uppercase tracking-[0.2em] py-2.5 hover:bg-foreground/90 transition-colors"
+          >
+            <WhatsAppIcon className="h-3.5 w-3.5" />
+            Order
+          </a>
+        )}
       </div>
     </article>
   );
