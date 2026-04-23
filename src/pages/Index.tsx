@@ -113,8 +113,8 @@ const Index = () => {
             <p className="text-center text-muted-foreground">No pieces in this category yet.</p>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-12 md:gap-x-6 md:gap-y-16">
-              {filtered.map((p) => (
-                <ProductCard key={p.id} product={p} />
+              {filtered.map((p, i) => (
+                <ProductCard key={p.id} product={p} priority={i < 4} />
               ))}
             </div>
           )}
