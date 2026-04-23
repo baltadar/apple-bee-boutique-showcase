@@ -1,7 +1,9 @@
 import { Product, formatPrice } from "@/data/products";
+import { optimizedImage, buildSrcSet, PRODUCT_IMAGE_SIZES } from "@/lib/image";
 
 interface Props {
   product: Product;
+  priority?: boolean;
 }
 
 const WHATSAPP_NUMBER = "254113822980";
