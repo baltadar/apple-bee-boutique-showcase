@@ -21,6 +21,7 @@ export interface Product {
   category: Category;
   isNew?: boolean;
   outOfStock?: boolean;
+  size?: string | number; // e.g. EU shoe size
 }
 
 export const CATEGORIES: Category[] = [
@@ -42,6 +43,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900710_quj5d5.jpg",
     category: "Shoes",
     isNew: true,
+    size: 42,
   },
   {
     id: "ab-sh-102",
@@ -50,6 +52,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900736_zrbsfl.jpg",
     category: "Shoes",
     isNew: true,
+    size: 41,
   },
   {
     id: "ab-sh-103",
@@ -58,6 +61,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900771_cwjsic.jpg",
     category: "Shoes",
     isNew: true,
+    size: 38,
   },
   {
     id: "ab-sh-104",
@@ -66,6 +70,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900811_shirpk.jpg",
     category: "Shoes",
     isNew: true,
+    size: 40,
   },
   // New arrivals — beaded slides (KES 800)
   {
@@ -75,6 +80,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933955/1776932900855_vhid9f.jpg",
     category: "Shoes",
     isNew: true,
+    size: 37,
   },
   {
     id: "ab-sh-106",
@@ -83,6 +89,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776935862/1776932900893_qfjauz.jpg",
     category: "Shoes",
     isNew: true,
+    size: 42,
   },
   {
     id: "ab-sh-107",
@@ -91,6 +98,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776934867/1776932900930_fqxqky.jpg",
     category: "Shoes",
     isNew: true,
+    size: 41,
   },
   {
     id: "ab-sh-108",
@@ -99,6 +107,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900965_l5hejc.jpg",
     category: "Shoes",
     isNew: true,
+    size: 40,
   },
   // Previous merchandise — out of stock
   {
