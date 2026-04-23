@@ -14,7 +14,7 @@ const WhatsAppIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-const ProductCard = ({ product }: Props) => {
+const ProductCard = ({ product, priority = false }: Props) => {
   const message = encodeURIComponent(
     `Hi Apple Bee Boutique, I'd like to order: ${product.name} (${formatPrice(
       product.price,
@@ -39,18 +39,27 @@ const ProductCard = ({ product }: Props) => {
           </span>
         )}
         <img
-          src={product.image}
+          src={optimizedImage(product.image, 800)}
+          srcSet={buildSrcSet(product.image)}
+          sizes={PRODUCT_IMAGE_SIZES}
           alt={product.name}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
           decoding="async"
+          width={800}
+          height={1000}
           className="product-image"
         />
         {product.hoverImage && !isOut && (
           <img
-            src={product.hoverImage}
+            src={optimizedImage(product.hoverImage, 800)}
+            srcSet={buildSrcSet(product.hoverImage)}
+            sizes={PRODUCT_IMAGE_SIZES}
             alt=""
             loading="lazy"
             decoding="async"
+            width={800}
+            height={1000}
             className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700"
           />
         )}
