@@ -15,11 +15,12 @@ const WhatsAppIcon = ({ className = "" }: { className?: string }) => (
 );
 
 const ProductCard = ({ product, priority = false }: Props) => {
+  const sizeLine = product.size !== undefined ? `, size ${product.size}` : "";
   const message = encodeURIComponent(
     `Hi Apple Bee Boutique, I'd like to order: ${product.name} (${formatPrice(
       product.price,
       product.currency
-    )}) — ref ${product.id}.`
+    )}${sizeLine}) — ref ${product.id}.`
   );
   const orderUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
