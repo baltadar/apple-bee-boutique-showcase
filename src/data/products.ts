@@ -20,6 +20,7 @@ export interface Product {
   hoverImage?: string; // optional secondary image shown on hover
   category: Category;
   isNew?: boolean;
+  outOfStock?: boolean;
 }
 
 export const CATEGORIES: Category[] = [
@@ -33,13 +34,80 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const products: Product[] = [
+  // New arrivals — woven olive slides (KES 600)
+  {
+    id: "ab-sh-101",
+    name: "Olive Woven Slide",
+    price: 600,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900710_quj5d5.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-102",
+    name: "Olive Woven Slide — Style II",
+    price: 600,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900736_zrbsfl.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-103",
+    name: "Olive Woven Slide — Style III",
+    price: 600,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900771_cwjsic.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-104",
+    name: "Olive Woven Slide — Style IV",
+    price: 600,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900811_shirpk.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  // New arrivals — beaded slides (KES 800)
+  {
+    id: "ab-sh-105",
+    name: "Beaded Slide — Bronze Knot",
+    price: 800,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933955/1776932900855_vhid9f.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-106",
+    name: "Beaded Slide — Onyx",
+    price: 800,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776935862/1776932900893_qfjauz.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-107",
+    name: "Beaded Slide — Copper Weave",
+    price: 800,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776934867/1776932900930_fqxqky.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  {
+    id: "ab-sh-108",
+    name: "Beaded Slide — Silver Crest",
+    price: 800,
+    image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900965_l5hejc.jpg",
+    category: "Shoes",
+    isNew: true,
+  },
+  // Previous merchandise — out of stock
   {
     id: "ab-sh-001",
     name: "Leather Slingback Flat",
     price: 6800,
     image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&q=80&auto=format&fit=crop",
     category: "Shoes",
-    isNew: true,
+    outOfStock: true,
   },
   {
     id: "ab-sh-002",
@@ -47,7 +115,7 @@ export const products: Product[] = [
     price: 8900,
     image: "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=1200&q=80&auto=format&fit=crop",
     category: "Shoes",
-    isNew: true,
+    outOfStock: true,
   },
   {
     id: "ab-sh-003",
@@ -55,6 +123,7 @@ export const products: Product[] = [
     price: 5900,
     image: "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?w=1200&q=80&auto=format&fit=crop",
     category: "Shoes",
+    outOfStock: true,
   },
   {
     id: "ab-sh-004",
@@ -62,6 +131,7 @@ export const products: Product[] = [
     price: 7200,
     image: "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?w=1200&q=80&auto=format&fit=crop",
     category: "Shoes",
+    outOfStock: true,
   },
   {
     id: "ab-001",
