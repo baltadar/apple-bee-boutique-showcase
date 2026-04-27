@@ -240,13 +240,6 @@ export const products: Product[] = [
       category: "Sets" as Category,
     },
     {
-      id: "ab-006",
-      name: "Tailored Wool Coat",
-      price: 19500,
-      image: "https://images.unsplash.com/photo-1551163943-3f7053a3e9b6?w=1200&q=80&auto=format&fit=crop",
-      category: "Outerwear" as Category,
-    },
-    {
       id: "ab-007",
       name: "Leather Shoulder Bag",
       price: 10500,
