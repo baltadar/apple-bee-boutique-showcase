@@ -123,8 +123,8 @@ export const products: Product[] = [
     price: 900,
     image: nudeSneakers,
     category: "Shoes",
-    isNew: true,
     size: 36,
+    outOfStock: true,
   },
   {
     id: "ab-sh-110",
