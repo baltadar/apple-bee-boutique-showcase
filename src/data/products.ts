@@ -2,6 +2,13 @@
 // To add or swap products, edit this file. Image URLs can be any cloud-hosted link
 // (Cloudinary, Shopify CDN, S3, Unsplash, etc.). Aspect ratio is enforced by the layout.
 
+import nudeSneakers from "@/assets/products/nude-sneakers.jpg";
+import nudeSlide from "@/assets/products/nude-slide.jpg";
+import blackSlide from "@/assets/products/black-slide.jpg";
+import kidsSuperhero from "@/assets/products/kids-superhero.jpg";
+import oliveMaryJane from "@/assets/products/olive-mary-jane.jpg";
+import blackMaryJane from "@/assets/products/black-mary-jane.jpg";
+
 export type Category =
   | "Shoes"
   | "Dresses"
@@ -109,7 +116,61 @@ export const products: Product[] = [
     isNew: true,
     size: 40,
   },
-  // Previous merchandise — out of stock
+  // New arrivals — additional styles
+  {
+    id: "ab-sh-109",
+    name: "Nude Tone Sneakers",
+    price: 900,
+    image: nudeSneakers,
+    category: "Shoes",
+    isNew: true,
+    size: 36,
+  },
+  {
+    id: "ab-sh-110",
+    name: "Nude Slide Sandals",
+    price: 400,
+    image: nudeSlide,
+    category: "Shoes",
+    isNew: true,
+    size: 38,
+  },
+  {
+    id: "ab-sh-111",
+    name: "Black Slide Sandals",
+    price: 400,
+    image: blackSlide,
+    category: "Shoes",
+    isNew: true,
+    size: 40,
+  },
+  {
+    id: "ab-sh-112",
+    name: "Kids Superhero Slippers",
+    price: 300,
+    image: kidsSuperhero,
+    category: "Shoes",
+    isNew: true,
+    size: "32–33",
+  },
+  {
+    id: "ab-sh-113",
+    name: "Olive Mary Jane Flats",
+    price: 600,
+    image: oliveMaryJane,
+    category: "Shoes",
+    isNew: true,
+    size: 42,
+  },
+  {
+    id: "ab-sh-114",
+    name: "Black Mary Jane Flats",
+    price: 600,
+    image: blackMaryJane,
+    category: "Shoes",
+    isNew: true,
+    size: 37,
+  },
   {
     id: "ab-sh-001",
     name: "Leather Slingback Flat",
