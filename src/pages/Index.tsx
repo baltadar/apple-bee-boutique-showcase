@@ -20,11 +20,61 @@ const Index = () => {
   const title = category;
   const path = `/?category=${encodeURIComponent(category)}`;
 
-  const seoTitle = `${category} — Apple Bee Boutique Kenya`;
-  const seoDescription =
-    category === "Shoes"
-      ? "Shop curated women's shoes at Apple Bee Boutique, a Nairobi-based boutique. Heels, flats, mules and sandals. Order online or via WhatsApp."
-      : `Shop ${category.toLowerCase()} from Apple Bee Boutique, a Nairobi-based womenswear boutique. Order online or via WhatsApp.`;
+  const seoCopy: Record<Category, { title: string; description: string; intro: string }> = {
+    Shoes: {
+      title: "Ladies Shoes in Nairobi — Sandals, Slides & Flats | Apple Bee Boutique",
+      description:
+        "Shop affordable ladies shoes in Nairobi at Apple Bee Boutique. Sandals, slides, flats, sneakers and Mary Janes for women. Order online or via WhatsApp — delivery across Kenya.",
+      intro:
+        "Discover ladies shoes in Nairobi at Apple Bee Boutique — from woven olive slides and beaded sandals to Mary Jane flats and everyday sneakers. Affordable women's footwear in Kenya, delivered countrywide and easy to order on WhatsApp.",
+    },
+    Dresses: {
+      title: "Dresses in Nairobi — Women's Dresses Kenya | Apple Bee Boutique",
+      description:
+        "Shop dresses in Nairobi — linen, silk and slip dresses for everyday and occasion wear. Ladies fashion in Kenya, order online or via WhatsApp.",
+      intro:
+        "Browse dresses in Nairobi at Apple Bee Boutique — linen wraps, silk slip midis and ivory slip dresses styled for Kenyan women.",
+    },
+    Tops: {
+      title: "Women's Tops & Blouses in Nairobi | Apple Bee Boutique",
+      description:
+        "Cotton blouses, cashmere knits and everyday tops for women in Nairobi. Ladies fashion in Kenya — order online or via WhatsApp.",
+      intro:
+        "Shop women's tops and blouses in Nairobi — cotton poplin, cashmere crews and everyday essentials at Apple Bee Boutique.",
+    },
+    Bottoms: {
+      title: "Women's Trousers & Skirts in Nairobi | Apple Bee Boutique",
+      description:
+        "Pleated trousers, midi skirts and tailored bottoms for women in Nairobi, Kenya. Order online or via WhatsApp.",
+      intro:
+        "Explore women's trousers and skirts in Nairobi — pleated wide-legs and midi skirts for work and weekends.",
+    },
+    Sets: {
+      title: "Women's Two-Piece Sets in Nairobi | Apple Bee Boutique",
+      description:
+        "Coordinated knit sets and matching two-piece outfits for women in Nairobi. Ladies fashion in Kenya — order online or via WhatsApp.",
+      intro:
+        "Shop women's two-piece sets in Nairobi — knit co-ords designed to wear together or apart.",
+    },
+    Outerwear: {
+      title: "Women's Coats & Outerwear in Nairobi | Apple Bee Boutique",
+      description:
+        "Trench coats and tailored outerwear for women in Nairobi, Kenya. Order online or via WhatsApp.",
+      intro:
+        "Discover women's outerwear in Nairobi — trench coats and layering pieces for cool Kenyan mornings.",
+    },
+    Accessories: {
+      title: "Women's Accessories in Nairobi — Bags & Scarves | Apple Bee Boutique",
+      description:
+        "Leather shoulder bags, silk scarves and everyday accessories for women in Nairobi, Kenya. Order online or via WhatsApp.",
+      intro:
+        "Browse women's accessories in Nairobi — leather bags, silk scarves and finishing pieces from Apple Bee Boutique.",
+    },
+  };
+
+  const seoTitle = seoCopy[category].title;
+  const seoDescription = seoCopy[category].description;
+  const seoIntro = seoCopy[category].intro;
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
