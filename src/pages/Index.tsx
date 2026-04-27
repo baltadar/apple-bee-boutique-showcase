@@ -139,23 +139,27 @@ const Index = () => {
               id="hero-heading"
               className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto text-background drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Shoes & Ladies Accessories
+              Ladies Shoes & Fashion in Nairobi
             </h1>
-            <p className="sr-only">
-              Apple Bee Boutique is a Nairobi-based boutique offering shoes, dresses, tops,
-              sets, outerwear and accessories. Shop online or order via WhatsApp.
+            <p className="mt-4 max-w-2xl mx-auto text-sm md:text-base text-background/90">
+              Apple Bee Boutique — affordable women's shoes, sandals, slides, dresses
+              and accessories. Based in Nairobi, delivering across Kenya. Order online
+              or via WhatsApp.
             </p>
           </div>
         </section>
 
         {/* Collection */}
         <section className="container py-16 md:py-24" aria-labelledby="collection-heading">
-          <header className="text-center mb-12 md:mb-16">
+          <header className="text-center mb-10 md:mb-14">
             <h2 id="collection-heading" className="font-serif text-3xl md:text-4xl">
               {title}
             </h2>
             <p className="mt-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
               {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
+            </p>
+            <p className="mt-5 max-w-2xl mx-auto text-sm md:text-[15px] text-muted-foreground leading-relaxed">
+              {seoIntro}
             </p>
           </header>
 
@@ -168,6 +172,17 @@ const Index = () => {
               ))}
             </div>
           )}
+
+          {/* Crawler-friendly category context */}
+          <aside className="mt-16 max-w-3xl mx-auto text-center text-xs text-muted-foreground/80 leading-relaxed">
+            <p>
+              Apple Bee Boutique is a Nairobi-based online boutique for women's
+              fashion in Kenya. Popular searches include ladies shoes in Nairobi,
+              sandals and slides Kenya, dresses in Nairobi, women's tops, bags and
+              accessories. We deliver countrywide and accept orders by WhatsApp and
+              M-Pesa.
+            </p>
+          </aside>
         </section>
       </main>
 
