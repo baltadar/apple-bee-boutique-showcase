@@ -2,6 +2,13 @@
 // To add or swap products, edit this file. Image URLs can be any cloud-hosted link
 // (Cloudinary, Shopify CDN, S3, Unsplash, etc.). Aspect ratio is enforced by the layout.
 
+import nudeSneakers from "@/assets/products/nude-sneakers.jpg";
+import nudeSlide from "@/assets/products/nude-slide.jpg";
+import blackSlide from "@/assets/products/black-slide.jpg";
+import kidsSuperhero from "@/assets/products/kids-superhero.jpg";
+import oliveMaryJane from "@/assets/products/olive-mary-jane.jpg";
+import blackMaryJane from "@/assets/products/black-mary-jane.jpg";
+
 export type Category =
   | "Shoes"
   | "Dresses"
