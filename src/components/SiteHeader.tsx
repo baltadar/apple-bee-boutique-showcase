@@ -28,12 +28,12 @@ const SiteHeader = () => {
 
         {/* Secondary nav */}
         <nav className="border-t border-border/50">
-          <ul className="flex items-center justify-center gap-5 md:gap-8 overflow-x-auto py-3 no-scrollbar">
+          <ul className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 md:gap-x-8 py-2 md:py-3">
             {CATEGORIES.map((c) => (
-              <li key={c} className="shrink-0">
+              <li key={c}>
                 <NavLink
                   to={`/?category=${encodeURIComponent(c)}`}
-                  className="nav-link"
+                  className="nav-link text-[11px] md:text-sm whitespace-nowrap"
                 >
                   {c}
                 </NavLink>
