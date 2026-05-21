@@ -54,6 +54,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900710_quj5d5.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 42,
   },
   {
@@ -63,6 +64,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900736_zrbsfl.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 39,
   },
   {
@@ -72,6 +74,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900771_cwjsic.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 38,
   },
   {
@@ -81,6 +84,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900811_shirpk.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 40,
   },
   // New arrivals — beaded slides (KES 800)
@@ -91,6 +95,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933955/1776932900855_vhid9f.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 37,
   },
   {
@@ -100,6 +105,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776935862/1776932900893_qfjauz.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 42,
   },
   {
@@ -109,6 +115,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776934867/1776932900930_fqxqky.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 41,
   },
   {
@@ -118,6 +125,7 @@ export const products: Product[] = [
     image: "https://res.cloudinary.com/dbgcwdes6/image/upload/v1776933954/1776932900965_l5hejc.jpg",
     category: "Shoes",
     isNew: true,
+    outOfStock: true,
     size: 40,
   },
   // New arrivals — additional styles
