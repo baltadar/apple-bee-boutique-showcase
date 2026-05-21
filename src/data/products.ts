@@ -8,6 +8,10 @@ import blackSlide from "@/assets/products/black-slide.jpg";
 import kidsSuperhero from "@/assets/products/kids-superhero.jpg";
 import oliveMaryJane from "@/assets/products/olive-mary-jane.jpg";
 import blackMaryJane from "@/assets/products/black-mary-jane.jpg";
+import sphereBagPeach from "@/assets/products/sphere-bag-peach.jpg";
+import sphereBagSilver from "@/assets/products/sphere-bag-silver.jpg";
+import sphereBagGreen from "@/assets/products/sphere-bag-green.jpg";
+import sphereBagWhite from "@/assets/products/sphere-bag-white.jpg";
 
 export type Category =
   | "Shoes"
