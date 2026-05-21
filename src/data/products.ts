@@ -8,6 +8,10 @@ import blackSlide from "@/assets/products/black-slide.jpg";
 import kidsSuperhero from "@/assets/products/kids-superhero.jpg";
 import oliveMaryJane from "@/assets/products/olive-mary-jane.jpg";
 import blackMaryJane from "@/assets/products/black-mary-jane.jpg";
+import sphereBagPeach from "@/assets/products/sphere-bag-peach.jpg";
+import sphereBagSilver from "@/assets/products/sphere-bag-silver.jpg";
+import sphereBagGreen from "@/assets/products/sphere-bag-green.jpg";
+import sphereBagWhite from "@/assets/products/sphere-bag-white.jpg";
 
 export type Category =
   | "Shoes"
@@ -170,6 +174,39 @@ export const products: Product[] = [
     category: "Shoes",
     isNew: true,
     size: 37,
+  },
+  // Accessories — sphere clutch bags (KES 1,800)
+  {
+    id: "ab-ac-101",
+    name: "Sphere Clutch — Peach Marble",
+    price: 1800,
+    image: sphereBagPeach,
+    category: "Accessories",
+    isNew: true,
+  },
+  {
+    id: "ab-ac-102",
+    name: "Sphere Clutch — Mirror Silver",
+    price: 1800,
+    image: sphereBagSilver,
+    category: "Accessories",
+    isNew: true,
+  },
+  {
+    id: "ab-ac-103",
+    name: "Sphere Clutch — Emerald Swirl",
+    price: 1800,
+    image: sphereBagGreen,
+    category: "Accessories",
+    isNew: true,
+  },
+  {
+    id: "ab-ac-104",
+    name: "Sphere Clutch — Pearl White",
+    price: 1800,
+    image: sphereBagWhite,
+    category: "Accessories",
+    isNew: true,
   },
   {
     id: "ab-sh-001",
